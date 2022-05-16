@@ -1,42 +1,37 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text as RNText,
-  useColorScheme,
-  View,
-} from 'react-native';
+import { SafeAreaView, StatusBar, View } from 'react-native';
 
-import { Colors } from 'react-native/Libraries/NewAppScreen';
-
+import PlaceCta from 'component/partial/PlaceCta';
 import SectionHeader from '/component/partial/SectionHeader';
+import Asset1 from '/component/asset/image/place-1.png';
+import Asset2 from '/component/asset/image/place-2.png';
 
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <View>
+    <SafeAreaView>
+      <StatusBar barStyle="dark-content" />
+      {/* eslint-disable-next-line react-native/no-inline-styles */}
+      <View style={{ marginHorizontal: 24 }}>
         <SectionHeader
           title="Find your getaway"
-          body="Our spaces are designed for comfort - whether you are working, relaxing, or craving some spaces" />
+          body="Our spaces are designed for comfort - whether you are working, relaxing, or craving some spaces"
+        />
+
+        <PlaceCta
+          image={Asset1}
+          title="Vancouver, BC"
+          location="407 St Jacques | 1 Bdr"
+          eyebrow="From $636"
+        />
+        <PlaceCta
+          image={Asset2}
+          title="Victoria, BC"
+          location="407 St Jacques | 2 Bdr"
+          eyebrow="From $436"
+        />
       </View>
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-});
 
 export default App;
