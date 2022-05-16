@@ -1,8 +1,9 @@
 import React from 'react';
-
 import { Text as RNText } from 'react-native';
-import TextStyles, { fontColorStyles } from './Text.styles';
+
 import { TextProps } from './Text.types';
+
+import TextStyles, { fontColorStyles } from './Text.styles';
 
 const Text: React.FC<TextProps> = (props) => {
   const {

@@ -1,9 +1,10 @@
 import React from 'react';
 import { Image, View } from 'react-native';
-
 import Text from 'component/base/Text';
-import styles from './PlaceCta.styles';
+
 import { PlaceCtaProps } from './PlaceCta.types';
+
+import styles from './PlaceCta.styles';
 
 const PlaceCta: React.FC<PlaceCtaProps> = ({
   image,

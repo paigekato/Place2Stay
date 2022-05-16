@@ -1,9 +1,10 @@
-import Text from 'component/base/Text';
 import React from 'react';
 import { View } from 'react-native';
+import Text from 'component/base/Text';
+
+import { SectionHeaderProps } from './SectionHeader.types';
 
 import styles from './SectionHeader.styles';
-import { SectionHeaderProps } from './SectionHeader.types';
 
 const SectionHeader: React.FC<SectionHeaderProps> = ({ title, body }) => {
   return (
