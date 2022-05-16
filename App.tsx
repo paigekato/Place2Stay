@@ -11,7 +11,7 @@ import {
 
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 
-import Text from '/component/base/Text';
+import SectionHeader from '/component/partial/SectionHeader';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -24,9 +24,9 @@ const App = () => {
     <SafeAreaView style={backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <View>
-        <Text variant="heading">Hello world</Text>
-        <Text variant="hint">Hello world</Text>
-        <Text variant="label">Hello world</Text>
+        <SectionHeader
+          title="Find your getaway"
+          body="Our spaces are designed for comfort - whether you are working, relaxing, or craving some spaces" />
       </View>
     </SafeAreaView>
   );
