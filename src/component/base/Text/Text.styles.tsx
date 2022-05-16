@@ -26,3 +26,12 @@ export default StyleSheet.create({
     lineHeight: 20,
   },
 });
+
+export const fontColorStyles = StyleSheet.create({
+  grey: {
+    color: 'grey',
+  },
+  black: {
+    color: 'black',
+  },
+});

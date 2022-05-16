@@ -25,7 +25,7 @@ const PlaceCta: React.FC<PlaceCtaProps> = ({
       <Text variant="heading2" style={styles.title}>
         {title}
       </Text>
-      <Text>{location}</Text>
+      <Text color="grey">{location}</Text>
     </View>
   );
 };
