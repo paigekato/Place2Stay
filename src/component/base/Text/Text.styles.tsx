@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { colors } from 'theme/colors';
 
 export default StyleSheet.create({
   heading1: {
@@ -38,9 +39,9 @@ export default StyleSheet.create({
 
 export const fontColorStyles = StyleSheet.create({
   grey: {
-    color: 'grey',
+    color: colors.textSecondary,
   },
   black: {
-    color: 'black',
+    color: colors.textPrimary,
   },
 });

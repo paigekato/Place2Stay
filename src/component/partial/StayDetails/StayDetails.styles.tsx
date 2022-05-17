@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native';
 
+import { colors } from '/theme/colors';
+
 export default StyleSheet.create({
   container: {
     borderWidth: StyleSheet.hairlineWidth,
@@ -16,7 +18,7 @@ export default StyleSheet.create({
     top: 2,
   },
   menuDots: {
-    color: '#5865F2',
+    color: colors.highlightColor,
   },
   attributeWrapper: {
     flexDirection: 'row',
@@ -26,7 +28,7 @@ export default StyleSheet.create({
     paddingBottom: 12,
   },
   typeWrapper: {
-    backgroundColor: '#5865F2',
+    backgroundColor: colors.highlightColor,
     position: 'absolute',
     paddingHorizontal: 16,
     paddingVertical: 10,
