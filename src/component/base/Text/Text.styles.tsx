@@ -27,6 +27,7 @@ export default StyleSheet.create({
     fontSize: 10,
     lineHeight: 12,
     fontWeight: '500',
+    letterSpacing: 0.6,
     textTransform: 'uppercase',
   },
   hint: {
