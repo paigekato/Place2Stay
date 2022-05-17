@@ -1,15 +1,22 @@
 import React from 'react';
-import { SafeAreaView, StatusBar } from 'react-native';
-
-import Home from '/component/screen/Home';
+import { StatusBar, StyleSheet, View } from 'react-native';
+// import Home from '/component/screen/Home';
+import Stay from 'component/screen/Stay';
 
 const App = () => {
   return (
-    <SafeAreaView>
+    <View style={styles.container}>
       <StatusBar barStyle="dark-content" />
-      <Home />
-    </SafeAreaView>
+      {/* <Home /> */}
+      <Stay />
+    </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
 
 export default App;

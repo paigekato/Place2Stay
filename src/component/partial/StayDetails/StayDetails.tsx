@@ -27,6 +27,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
 
       {details.items.map((item, index) => (
         <View
+          key={item.itemLabel}
           style={[
             styles.attributeWrapper,
             index + 1 !== details.items.length && styles.attributeSpacing,

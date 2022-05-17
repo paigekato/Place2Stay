@@ -19,6 +19,34 @@ export const homeMockData = {
           imageLabel: 'From $126',
           title: '408 St. Jacques | 1 Br',
           location: 'Vancouver, BC',
+          details: [
+            {
+              title: 'Access codes',
+              items: [
+                {
+                  itemLabel: 'building',
+                  itemDetail: '7853',
+                },
+                {
+                  itemLabel: 'apartment',
+                  itemDetail: '7863',
+                },
+              ],
+            },
+            {
+              title: 'Wifi',
+              items: [
+                {
+                  itemLabel: 'name',
+                  itemDetail: 'places2stay',
+                },
+                {
+                  itemLabel: 'password',
+                  itemDetail: 'funwaytostay',
+                },
+              ],
+            },
+          ],
         },
         {
           id: 2,
