@@ -22,9 +22,9 @@ const Stay: React.FC = () => {
 
       <View style={styles.contentWrapper}>
         <View style={styles.title}>
-          <Text variant="heading2">{title}</Text>
+          <Text variant="heading2">{location}</Text>
           <Text style={styles.location} color="grey">
-            {location}
+            {title}
           </Text>
           <Text color="grey">Oct 29, 2022 - Oct 31, 2022</Text>
         </View>
