@@ -1,9 +1,10 @@
 import React from 'react';
 import { FlatList, Image, ScrollView, View } from 'react-native';
-import Text from 'component/base/Text';
-import PlaceCta from 'component/partial/PlaceCta';
-import SectionHeader from 'component/partial/SectionHeader';
-import { homeMockData } from 'data/mockData';
+
+import Text from '/component/base/Text';
+import PlaceCta from '/component/partial/PlaceCta';
+import SectionHeader from '/component/partial/SectionHeader';
+import { homeMockData } from '/data/mockData';
 
 import styles from './Home.styles';
 

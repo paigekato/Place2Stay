@@ -1,6 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
-import Text from 'component/base/Text';
+
+import Text from '/component/base/Text';
 
 import { SectionHeaderProps } from './SectionHeader.types';
 
