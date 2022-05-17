@@ -13,6 +13,7 @@ const Home: React.FC = () => {
 
   return (
     <FlatList
+      contentContainerStyle={styles.container}
       data={placeCtas.places}
       initialNumToRender={10}
       showsVerticalScrollIndicator={false}
