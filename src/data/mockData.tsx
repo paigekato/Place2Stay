@@ -9,7 +9,7 @@ import Vancouver from '/asset/image/vancouver.png';
 export const homeMockData = {
   sections: {
     placeCtas: {
-      title: 'Find your getaway',
+      title: 'Find Your Getaway',
       description:
         'Our spaces are designed for comfort - whether you are working, relaxing, or craving some spaces',
       places: [
@@ -44,7 +44,7 @@ export const homeMockData = {
       ],
     },
     cityCtas: {
-      title: '20+ cities to explore',
+      title: '20+ Cities to Explore',
       places: [
         {
           id: 1,
@@ -68,7 +68,7 @@ export const homeMockData = {
           title: 'Vancouver',
         },
         {
-          id: 1,
+          id: 5,
           image: Toronto,
           title: 'Toronto',
         },

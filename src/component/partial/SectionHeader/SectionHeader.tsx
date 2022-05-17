@@ -6,9 +6,13 @@ import { SectionHeaderProps } from './SectionHeader.types';
 
 import styles from './SectionHeader.styles';
 
-const SectionHeader: React.FC<SectionHeaderProps> = ({ title, body }) => {
+const SectionHeader: React.FC<SectionHeaderProps> = ({
+  title,
+  body,
+  style: styleProps,
+}) => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, styleProps]}>
       <Text variant="heading1" style={styles.heading}>
         {title}
       </Text>

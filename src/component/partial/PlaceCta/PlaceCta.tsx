@@ -11,9 +11,10 @@ const PlaceCta: React.FC<PlaceCtaProps> = ({
   title,
   location,
   eyebrow,
+  style: styleProps,
 }) => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, styleProps]}>
       <View style={styles.imageWrapper}>
         <Image style={styles.image} source={image} />
         {!!eyebrow && (
