@@ -5,11 +5,13 @@ export default StyleSheet.create({
     fontSize: 24,
     lineHeight: 29,
     fontWeight: '800',
+    fontFamily: 'MerriweatherSans-Bold',
   },
   heading2: {
     fontSize: 18,
     lineHeight: 29,
     fontWeight: '600',
+    fontFamily: 'MerriweatherSans-Bold',
   },
   paragraph: {
     fontSize: 12,

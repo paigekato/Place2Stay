@@ -2,8 +2,8 @@ import React from 'react';
 import { SafeAreaView, StatusBar, View } from 'react-native';
 import PlaceCta from 'component/partial/PlaceCta';
 
-import Asset1 from '/component/asset/image/place-1.png';
-import Asset2 from '/component/asset/image/place-2.png';
+import Asset1 from '/asset/image/place-1.png';
+import Asset2 from '/asset/image/place-2.png';
 import SectionHeader from '/component/partial/SectionHeader';
 
 const App = () => {
