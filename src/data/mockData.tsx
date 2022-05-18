@@ -42,7 +42,7 @@ export const homeMockData = {
                 },
                 {
                   itemLabel: 'password',
-                  itemDetail: 'funwaytostay',
+                  itemDetail: 'meowmeow',
                 },
               ],
             },
@@ -54,6 +54,34 @@ export const homeMockData = {
           imageLabel: 'From $126',
           title: '408 St. Jacques | 1 Br',
           location: 'Victoria, BC',
+          details: [
+            {
+              title: 'Access codes',
+              items: [
+                {
+                  itemLabel: 'building',
+                  itemDetail: '7853',
+                },
+                {
+                  itemLabel: 'apartment',
+                  itemDetail: '7863',
+                },
+              ],
+            },
+            {
+              title: 'Wifi',
+              items: [
+                {
+                  itemLabel: 'name',
+                  itemDetail: 'places2stay',
+                },
+                {
+                  itemLabel: 'password',
+                  itemDetail: 'moomoo',
+                },
+              ],
+            },
+          ],
         },
         {
           id: 3,
@@ -61,6 +89,34 @@ export const homeMockData = {
           imageLabel: 'From $126',
           title: '408 St. Jacques | 1 Br',
           location: 'Tofino, BC',
+          details: [
+            {
+              title: 'Access codes',
+              items: [
+                {
+                  itemLabel: 'building',
+                  itemDetail: '7853',
+                },
+                {
+                  itemLabel: 'apartment',
+                  itemDetail: '7863',
+                },
+              ],
+            },
+            {
+              title: 'Wifi',
+              items: [
+                {
+                  itemLabel: 'name',
+                  itemDetail: 'places2stay',
+                },
+                {
+                  itemLabel: 'password',
+                  itemDetail: 'funwaytostay',
+                },
+              ],
+            },
+          ],
         },
         {
           id: 4,
@@ -68,6 +124,34 @@ export const homeMockData = {
           imageLabel: 'From $126',
           title: '408 St. Jacques | 1 Br',
           location: 'Whistler, BC',
+          details: [
+            {
+              title: 'Access codes',
+              items: [
+                {
+                  itemLabel: 'building',
+                  itemDetail: '7853',
+                },
+                {
+                  itemLabel: 'apartment',
+                  itemDetail: '7863',
+                },
+              ],
+            },
+            {
+              title: 'Wifi',
+              items: [
+                {
+                  itemLabel: 'name',
+                  itemDetail: 'places2stay',
+                },
+                {
+                  itemLabel: 'password',
+                  itemDetail: 'funwaytostay',
+                },
+              ],
+            },
+          ],
         },
       ],
     },

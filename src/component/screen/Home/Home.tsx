@@ -1,5 +1,12 @@
 import React from 'react';
-import { FlatList, Image, SafeAreaView, ScrollView, View } from 'react-native';
+import {
+  Button,
+  FlatList,
+  Image,
+  SafeAreaView,
+  ScrollView,
+  View,
+} from 'react-native';
 
 import Text from '/component/base/Text';
 import PlaceCta from '/component/partial/PlaceCta';
@@ -8,7 +15,7 @@ import { homeMockData } from '/data/mockData';
 
 import styles from './Home.styles';
 
-const Home: React.FC = () => {
+const Home: React.FC = ({ navigation }) => {
   const { placeCtas, cityCtas } = homeMockData.sections;
 
   return (
@@ -20,11 +27,20 @@ const Home: React.FC = () => {
         showsVerticalScrollIndicator={false}
         keyExtractor={(item) => item.title + item.id}
         ListHeaderComponent={
-          <SectionHeader
-            style={styles.wrapper}
-            title={placeCtas.title}
-            body={placeCtas.description}
-          />
+          <>
+            <Button
+              title="SEARCH MODAL"
+              onPress={() =>
+                navigation.navigate('ModalStack', { screen: 'Search' })
+              }
+            />
+
+            <SectionHeader
+              style={styles.wrapper}
+              title={placeCtas.title}
+              body={placeCtas.description}
+            />
+          </>
         }
         renderItem={({ item }) => (
           <PlaceCta
@@ -33,6 +49,11 @@ const Home: React.FC = () => {
             location={item.title}
             eyebrow={item.imageLabel}
             style={styles.wrapper}
+            onPress={() =>
+              navigation.navigate('Stay', {
+                stay: item,
+              })
+            }
           />
         )}
         ListFooterComponent={

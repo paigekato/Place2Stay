@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, View } from 'react-native';
+import { Image, Pressable, View } from 'react-native';
 
 import Text from '/component/base/Text';
 
@@ -12,24 +12,27 @@ const PlaceCta: React.FC<PlaceCtaProps> = ({
   title,
   location,
   eyebrow,
+  onPress,
   style: styleProps,
 }) => {
   return (
-    <View style={[styles.container, styleProps]}>
-      <View style={styles.imageWrapper}>
-        <Image style={styles.image} source={image} />
-        {!!eyebrow && (
-          <View style={styles.eyebrow}>
-            <Text variant="label">{eyebrow}</Text>
-          </View>
-        )}
-      </View>
+    <Pressable onPress={onPress}>
+      <View style={[styles.container, styleProps]}>
+        <View style={styles.imageWrapper}>
+          <Image style={styles.image} source={image} />
+          {!!eyebrow && (
+            <View style={styles.eyebrow}>
+              <Text variant="label">{eyebrow}</Text>
+            </View>
+          )}
+        </View>
 
-      <Text variant="heading2" style={styles.title}>
-        {title}
-      </Text>
-      <Text color="grey">{location}</Text>
-    </View>
+        <Text variant="heading2" style={styles.title}>
+          {title}
+        </Text>
+        <Text color="grey">{location}</Text>
+      </View>
+    </Pressable>
   );
 };
 

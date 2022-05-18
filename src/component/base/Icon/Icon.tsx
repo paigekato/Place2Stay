@@ -4,7 +4,7 @@ import { Color, colors } from 'theme/colors';
 
 import component from './Icon.component';
 
-type IconName = keyof typeof component;
+export type IconName = keyof typeof component;
 
 interface IconProps {
   name: IconName;

@@ -1,23 +1,29 @@
 import React from 'react';
-import { StatusBar, StyleSheet, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import Home from '/component/screen/Home';
-// import Stay from 'component/screen/Stay';
+import BottomTabs from '/component/navigator/BottomTabs';
+import ModalStack from '/component/navigator/ModalStack';
+
+const { Navigator, Screen } = createNativeStackNavigator();
 
 const App = () => {
   return (
-    <View style={styles.container}>
-      <StatusBar barStyle="dark-content" />
-      <Home />
-      {/* <Stay /> */}
-    </View>
+    <NavigationContainer>
+      <Navigator>
+        <Screen
+          name="BottomTabs"
+          component={BottomTabs}
+          options={{ headerShown: false }}
+        />
+        <Screen
+          name="ModalStack"
+          component={ModalStack}
+          options={{ headerShown: false, presentation: 'transparentModal' }}
+        />
+      </Navigator>
+    </NavigationContainer>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
 
 export default App;

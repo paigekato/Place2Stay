@@ -6,4 +6,5 @@ export interface PlaceCtaProps {
   location: string;
   eyebrow?: string;
   style?: StyleProp<ViewStyle>;
+  onPress: () => void;
 }
