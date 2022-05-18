@@ -7,3 +7,5 @@ export const colors = {
   textPrimary: '#23272A',
   textSecondary: '#717F8E',
 };
+
+export type Color = keyof typeof colors;
