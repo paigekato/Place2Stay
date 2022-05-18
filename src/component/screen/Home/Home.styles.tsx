@@ -2,7 +2,8 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   container: {
-    marginTop: 40,
+    paddingTop: 40,
+    paddingBottom: 30,
   },
   wrapper: {
     marginHorizontal: 24,
