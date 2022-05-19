@@ -4,9 +4,11 @@ import StayDetails from 'component/partial/StayDetails';
 
 import Text from '/component/base/Text';
 
+import { StayProps } from './Stay.types';
+
 import styles from './Stay.styles';
 
-const Stay: React.FC = ({ route }) => {
+const Stay: React.FC<StayProps> = ({ route }) => {
   const { stay } = route.params;
 
   return (

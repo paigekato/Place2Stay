@@ -9,5 +9,5 @@ export interface TextProps {
     | 'paragraph'
     | 'label'
     | 'hint';
-  color?: 'grey';
+  color?: 'grey' | 'white';
 }

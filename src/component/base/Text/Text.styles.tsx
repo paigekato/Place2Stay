@@ -44,4 +44,7 @@ export const fontColorStyles = StyleSheet.create({
   black: {
     color: colors.textPrimary,
   },
+  white: {
+    color: 'white',
+  },
 });

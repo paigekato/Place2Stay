@@ -22,7 +22,9 @@ const PlaceCta: React.FC<PlaceCtaProps> = ({
           <Image style={styles.image} source={image} />
           {!!eyebrow && (
             <View style={styles.eyebrow}>
-              <Text variant="label">{eyebrow}</Text>
+              <Text variant="label" color="white">
+                {eyebrow}
+              </Text>
             </View>
           )}
         </View>

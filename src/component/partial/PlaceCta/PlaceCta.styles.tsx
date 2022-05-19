@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { colors } from 'theme/colors';
 
 export default StyleSheet.create({
   container: {
@@ -19,8 +20,7 @@ export default StyleSheet.create({
     position: 'absolute',
     top: 0,
     right: 0,
-    opacity: 0.8,
-    backgroundColor: 'white',
+    backgroundColor: colors.highlightColor,
     paddingVertical: 8,
     paddingHorizontal: 12,
     borderBottomLeftRadius: 8,

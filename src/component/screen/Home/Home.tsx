@@ -13,9 +13,11 @@ import PlaceCta from '/component/partial/PlaceCta';
 import SectionHeader from '/component/partial/SectionHeader';
 import { homeMockData } from '/data/mockData';
 
+import { HomeProps } from './Home.types';
+
 import styles from './Home.styles';
 
-const Home: React.FC = ({ navigation }) => {
+const Home: React.FC<HomeProps> = ({ navigation }) => {
   const { placeCtas, cityCtas } = homeMockData.sections;
 
   return (
@@ -50,7 +52,7 @@ const Home: React.FC = ({ navigation }) => {
             eyebrow={item.imageLabel}
             style={styles.wrapper}
             onPress={() =>
-              navigation.navigate('Stay', {
+              navigation.push('Stay', {
                 stay: item,
               })
             }
