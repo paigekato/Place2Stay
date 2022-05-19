@@ -26,9 +26,7 @@ const Home: React.FC<HomeProps> = ({ navigation }) => {
           <>
             <SearchButton
               style={styles.searchButton}
-              onPress={() =>
-                navigation.navigate('ModalStack', { screen: 'Search' })
-              }
+              onPress={() => navigation.navigate('Search')}
             />
 
             <SectionHeader

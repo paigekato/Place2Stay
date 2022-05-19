@@ -10,11 +10,12 @@ export default StyleSheet.create({
     alignItems: 'center',
     borderWidth: 1,
     borderColor: colors.highlightColor,
-    borderRadius: 100,
+    borderRadius: 20,
     shadowColor: colors.highlightColor,
     shadowOffset: { width: -4, height: 4 },
     shadowOpacity: 0.4,
     shadowRadius: 4,
+    height: 52,
   },
   placeholder: {
     fontWeight: '600',

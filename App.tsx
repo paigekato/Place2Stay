@@ -1,12 +1,17 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
 
-import CardStack from '/component/navigator/CardStack';
+import ModalStack from '/component/navigator/ModalStack';
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <CardStack />
+    <NavigationContainer
+      theme={{
+        ...DefaultTheme,
+        colors: { ...DefaultTheme.colors, background: 'transparent ' },
+      }}
+    >
+      <ModalStack />
     </NavigationContainer>
   );
 };
