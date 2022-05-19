@@ -1,12 +1,6 @@
 import React from 'react';
-import {
-  Button,
-  FlatList,
-  Image,
-  SafeAreaView,
-  ScrollView,
-  View,
-} from 'react-native';
+import { FlatList, Image, SafeAreaView, ScrollView, View } from 'react-native';
+import SearchButton from 'component/partial/SearchButton';
 
 import Text from '/component/base/Text';
 import PlaceCta from '/component/partial/PlaceCta';
@@ -30,8 +24,8 @@ const Home: React.FC<HomeProps> = ({ navigation }) => {
         keyExtractor={(item) => item.title + item.id}
         ListHeaderComponent={
           <>
-            <Button
-              title="SEARCH MODAL"
+            <SearchButton
+              style={styles.searchButton}
               onPress={() =>
                 navigation.navigate('ModalStack', { screen: 'Search' })
               }

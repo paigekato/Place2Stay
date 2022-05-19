@@ -8,6 +8,10 @@ export default StyleSheet.create({
   wrapper: {
     marginHorizontal: 24,
   },
+  searchButton: {
+    marginHorizontal: 24,
+    marginBottom: 32,
+  },
   footerWrapper: {
     marginBottom: 32,
   },
