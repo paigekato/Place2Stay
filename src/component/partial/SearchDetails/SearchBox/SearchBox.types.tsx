@@ -1,6 +1,7 @@
 import { StyleProp, ViewStyle } from 'react-native';
 
-export interface SearchButtonProps {
-  onPress: (city: string) => void;
+export interface SearchBoxProps {
+  attribute: string;
+  value: string;
   style?: StyleProp<ViewStyle>;
 }

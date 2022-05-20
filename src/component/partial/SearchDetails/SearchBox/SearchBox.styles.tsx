@@ -2,21 +2,17 @@ import { StyleSheet } from 'react-native';
 
 import { boxes } from '/theme/boxes';
 
+export const SEARCH_BOX_HEIGHT = 52;
+
 export default StyleSheet.create({
-  container: {
+  wrapper: {
     ...boxes.base,
-    padding: 10,
     flexDirection: 'row',
-    justifyContent: 'space-between',
     alignItems: 'center',
+    justifyContent: 'space-between',
     borderRadius: 20,
-    height: 52,
-  },
-  placeholder: {
-    fontWeight: '600',
-  },
-  textWrapper: {
-    flexGrow: 1,
-    marginLeft: 8,
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    height: SEARCH_BOX_HEIGHT,
   },
 });

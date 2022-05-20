@@ -10,4 +10,5 @@ export interface TextProps {
     | 'label'
     | 'hint';
   color?: 'grey' | 'white';
+  fontWeight?: '400' | '600' | '800';
 }

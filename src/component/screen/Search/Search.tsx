@@ -31,13 +31,13 @@ const Search: React.FC = ({ navigation }) => {
       Animated.timing(contentFadeIn, {
         toValue: 1,
         duration: 800,
-        delay: 250,
+        delay: 600,
         useNativeDriver: true,
       }),
       Animated.timing(heightAnimation, {
         toValue: 450,
-        duration: 800,
-        delay: 450,
+        duration: 600,
+        delay: 600,
         easing: Easing.bezier(0.17, 0.67, 0.27, 0.84),
         useNativeDriver: false,
       }),
@@ -68,6 +68,12 @@ const Search: React.FC = ({ navigation }) => {
     outputRange: [0, 1],
   });
 
+  const handlePress = (city: string) => {
+    navigation.push('SearchStay', {
+      location: city,
+    });
+  };
+
   return (
     <SafeAreaView>
       <Animated.View style={[styles.container, { opacity: opacityFadeOut }]}>
@@ -78,7 +84,7 @@ const Search: React.FC = ({ navigation }) => {
         <Animated.View style={[styles.search, { height: heightAnimation }]}>
           <Animated.View style={{ opacity: opacitySlowFadeIn }}>
             <Text variant="heading1">Where to?</Text>
-            <SearchForm style={styles.searchForm} />
+            <SearchForm style={styles.searchForm} onPress={handlePress} />
           </Animated.View>
         </Animated.View>
       </Animated.View>

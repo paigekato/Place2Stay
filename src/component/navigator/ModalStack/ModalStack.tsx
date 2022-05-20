@@ -2,13 +2,14 @@ import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import BottomTabs from '/component/navigator/BottomTabs';
-import Search from '/component/screen/Search';
+import SearchStack from '/component/navigator/SearchStack';
 
 const { Navigator, Screen } = createNativeStackNavigator();
 
 const ModalStack: React.FC = () => {
   return (
     <Navigator
+      initialRouteName="Home"
       screenOptions={{
         headerShadowVisible: false,
         animation: 'none',
@@ -21,7 +22,7 @@ const ModalStack: React.FC = () => {
       />
       <Screen
         name="Search"
-        component={Search}
+        component={SearchStack}
         options={() => ({
           headerShown: false,
           presentation: 'transparentModal',

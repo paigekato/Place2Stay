@@ -8,7 +8,7 @@ const App = () => {
     <NavigationContainer
       theme={{
         ...DefaultTheme,
-        colors: { ...DefaultTheme.colors, background: 'transparent ' },
+        colors: { ...DefaultTheme.colors, background: 'white ' },
       }}
     >
       <ModalStack />

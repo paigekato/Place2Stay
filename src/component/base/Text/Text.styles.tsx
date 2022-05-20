@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
-import { colors } from 'theme/colors';
+
+import { colors } from '/theme/colors';
 
 export default StyleSheet.create({
   heading1: {
@@ -34,6 +35,18 @@ export default StyleSheet.create({
   hint: {
     fontSize: 16,
     lineHeight: 20,
+  },
+});
+
+export const fontWeightStyles = StyleSheet.create({
+  '400': {
+    fontWeight: '400',
+  },
+  '600': {
+    fontWeight: '600',
+  },
+  '800': {
+    fontWeight: '800',
   },
 });
 

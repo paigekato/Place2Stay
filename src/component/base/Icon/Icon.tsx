@@ -1,6 +1,7 @@
 import React from 'react';
 import Svg from 'react-native-svg';
-import { Color, colors } from 'theme/colors';
+
+import { Color, colors } from '/theme/colors';
 
 import component from './Icon.component';
 

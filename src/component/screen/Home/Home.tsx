@@ -26,7 +26,7 @@ const Home: React.FC<HomeProps> = ({ navigation }) => {
           <>
             <SearchButton
               style={styles.searchButton}
-              onPress={() => navigation.navigate('Search')}
+              onPress={() => navigation.push('Search')}
             />
 
             <SectionHeader
