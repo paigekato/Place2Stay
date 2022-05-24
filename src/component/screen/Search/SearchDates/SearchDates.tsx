@@ -8,6 +8,7 @@ import {
   View,
 } from 'react-native';
 import { onPressProps } from 'component/base/Calendar/Calendar.types';
+import Icon from 'component/base/Icon';
 
 import Calendar from '/component/base/Calendar';
 import {
@@ -107,12 +108,16 @@ const SearchDates: React.FC = ({ navigation, route }) => {
                         key={month}
                         style={[
                           styles.option,
+                          styles.monthOption,
                           date === month && styles.activeOption,
                         ]}
                         // TODO Update to multi select
                         onPress={() => setDate(month)}
                       >
-                        <Text style={styles.optionText}>{month}</Text>
+                        <Icon name="calendar" size="24px" />
+                        <Text style={[styles.optionText, styles.monthText]}>
+                          {month}
+                        </Text>
                       </Pressable>
                     ))}
                   </ScrollView>

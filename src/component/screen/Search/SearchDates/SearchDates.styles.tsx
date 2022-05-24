@@ -37,8 +37,18 @@ export default StyleSheet.create({
     paddingHorizontal: 12,
     marginRight: 12,
   },
+  monthOption: {
+    borderRadius: 8,
+    alignItems: 'center',
+    paddingVertical: 16,
+    width: 80,
+  },
   optionText: {
     textTransform: 'capitalize',
+  },
+  monthText: {
+    marginTop: 4,
+    fontSize: 10,
   },
   activeOption: {
     backgroundColor: colors.backgroundSecondary,
