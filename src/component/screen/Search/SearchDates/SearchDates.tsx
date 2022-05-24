@@ -12,7 +12,7 @@ import Text from '/component/base/Text';
 import CalendarToggle from '/component/partial/CalendarToggle';
 import SearchDetails from '/component/partial/SearchDetails';
 
-import styles from './SearchStay.styles';
+import styles from './SearchDates.styles';
 
 const LENGTH_OPTIONS = ['Weekend', 'Week', 'Month'];
 const DATES_OPTIONS = [
@@ -28,7 +28,7 @@ const DATES_OPTIONS = [
   'October',
 ];
 
-const SearchStay: React.FC = ({ navigation, route }) => {
+const SearchDates: React.FC = ({ navigation, route }) => {
   const [activeView, setActiveView] = React.useState('flexible');
   const [length, setLength] = React.useState('Weekend');
   const [date, setDate] = React.useState('January');
@@ -122,4 +122,4 @@ const SearchStay: React.FC = ({ navigation, route }) => {
   );
 };
 
-export default SearchStay;
+export default SearchDates;

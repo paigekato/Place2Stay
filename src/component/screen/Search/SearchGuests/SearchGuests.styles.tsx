@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import SearchStayStyles from '../SearchStay/SearchStay.styles';
+import SearchDatesStyles from '../SearchDates/SearchDates.styles';
 
 export default StyleSheet.create({
   container: {
@@ -10,7 +10,7 @@ export default StyleSheet.create({
   },
   // lazy sharing styles
   content: {
-    ...SearchStayStyles.content,
+    ...SearchDatesStyles.content,
   },
   results: {
     marginBottom: 16,

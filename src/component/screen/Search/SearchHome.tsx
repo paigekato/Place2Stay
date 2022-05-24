@@ -11,9 +11,9 @@ import Text from '/component/base/Text';
 import SearchButtonStyles from '/component/partial/SearchButton/SearchButton.styles';
 import SearchForm from '/component/partial/SearchForm';
 
-import styles from './Search.styles';
+import styles from './SearchHome.styles';
 
-const Search: React.FC = ({ navigation }) => {
+const SearchHome: React.FC = ({ navigation }) => {
   const searchButtonHeight = SearchButtonStyles.container.height;
   const fadeInAnimation = React.useRef(new Animated.Value(0)).current;
   const contentFadeIn = React.useRef(new Animated.Value(0)).current;
@@ -69,7 +69,7 @@ const Search: React.FC = ({ navigation }) => {
   });
 
   const handlePress = (city: string) => {
-    navigation.push('SearchStay', {
+    navigation.push('SearchDates', {
       location: city,
     });
   };
@@ -92,4 +92,4 @@ const Search: React.FC = ({ navigation }) => {
   );
 };
 
-export default Search;
+export default SearchHome;

@@ -1,10 +1,10 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import SearchDates from 'component/screen/Search/SearchDates';
 
 import IconButton from '/component/base/IconButton';
 import Search from '/component/screen/Search';
 import SearchGuests from '/component/screen/Search/SearchGuests';
-import SearchStay from '/component/screen/Search/SearchStay';
 
 const { Navigator, Screen } = createNativeStackNavigator();
 
@@ -29,8 +29,8 @@ const ModalStack: React.FC = () => {
         })}
       />
       <Screen
-        name="SearchStay"
-        component={SearchStay}
+        name="SearchDates"
+        component={SearchDates}
         options={({ navigation }) => ({
           headerShown: true,
           title: '',
