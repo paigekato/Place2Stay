@@ -1,9 +1,12 @@
+import LacBeauport from '/asset/image/lac-beauport.png';
 import Miami from '/asset/image/miami.png';
 import Montreal from '/asset/image/montreal.png';
 import NewYork from '/asset/image/new-york.png';
+import PalmSprings from '/asset/image/palm-springs.png';
 import Asset1 from '/asset/image/place-1.png';
 import Asset2 from '/asset/image/place-2.png';
 import Toronto from '/asset/image/toronto.png';
+import Tulum from '/asset/image/tulum.png';
 import Vancouver from '/asset/image/vancouver.png';
 
 export const citiesMockData = [
@@ -440,3 +443,39 @@ export const homeMockData = {
     },
   },
 };
+
+export const staysMockData = [
+  {
+    location: 'Lac-Beauport, Canada',
+    rating: '4.5',
+    hostedBy: 'Laury Jane',
+    description:
+      "At the beginning, the Lagöm is a swedish way of life: how to live well with less. With its large windows, the Lagöm offers you a totale immersion on the nature with a breathtaking view on the mountains and the Saint Laurent river. There is no television on the chalet to reduce your energy consumption but don't worry WIFI is in here. You could contact your family and friends thanks to our satellite.",
+    price: 425,
+    beds: 1,
+    bath: 1,
+    image: LacBeauport,
+  },
+  {
+    location: 'Tulum, Mexico',
+    rating: '4.8',
+    hostedBy: 'Andres Julio',
+    description:
+      'Esmeralda Boutique Hotel is an artwork in itself. With all of its local artisan-crafted decor your stay is guaranteed to be an experience. Each apartment is a perfect balance of simplicity and elegance while offering the many comforts for the everyday modern traveler.',
+    price: 211,
+    beds: 1,
+    bath: 1.5,
+    image: Tulum,
+  },
+  {
+    location: 'Palm Springs, United Sates',
+    rating: '4.7',
+    hostedBy: 'Philip Daniels',
+    description:
+      'Gorgeous midcentury gem tucked away at the foot of the San Jacinto mountain. This cozy time capsule was designed by famous architect William Krisel and features his signature butterfly roof. Expertly designed interiors made to stand out and match this quirky unique home. Relax in the hot tub in our yard, designed by an award winning hotel designer. Perfect retreat for anyone looking to enjoy the lush desert foliage but still, want the convenience of a 5-minute drive into downtown Palm Springs',
+    price: 2359,
+    beds: 3,
+    bath: 1,
+    image: PalmSprings,
+  },
+];

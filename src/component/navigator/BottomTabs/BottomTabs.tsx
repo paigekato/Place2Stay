@@ -1,9 +1,13 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'component/base/Icon';
+import Text from 'component/base/Text';
 
 import HomeStack from '/component/navigator/HomeStack';
 import { Color, colors } from '/theme/colors';
+
+import SearchStack from '../SearchStack';
+import TripsStack from '../TripsStack';
 
 const Tab = createBottomTabNavigator();
 
@@ -17,12 +21,45 @@ const BottomTabs: React.FC = () => {
         name="Home"
         component={HomeStack}
         options={{
-          tabBarShowLabel: false,
+          tabBarLabel: ({ focused }) => {
+            const styles = {
+              color: focused ? colors.highlightColor : colors.textPrimary,
+            };
+            return (
+              <Text variant="label" style={styles}>
+                Explore
+              </Text>
+            );
+          },
           tabBarIcon: ({ focused }) => {
             const iconColor = focused
               ? colors.highlightColor
               : colors.textPrimary;
-            return <Icon name="location" color={iconColor as Color} />;
+            return (
+              <Icon name="search" size="24px" color={iconColor as Color} />
+            );
+          },
+        }}
+      />
+      <Tab.Screen
+        name="Trips"
+        component={TripsStack}
+        options={{
+          tabBarLabel: ({ focused }) => {
+            const styles = {
+              color: focused ? colors.highlightColor : colors.textPrimary,
+            };
+            return (
+              <Text variant="label" style={styles}>
+                Trips
+              </Text>
+            );
+          },
+          tabBarIcon: ({ focused }) => {
+            const iconColor = focused
+              ? colors.highlightColor
+              : colors.textPrimary;
+            return <Icon name="house" size="24px" color={iconColor as Color} />;
           },
         }}
       />
