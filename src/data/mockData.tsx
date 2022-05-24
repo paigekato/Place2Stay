@@ -273,6 +273,7 @@ export const homeMockData = {
           image: Asset1,
           imageLabel: 'From $126',
           title: '408 St. Jacques | 1 Br',
+          host: 'Corrie',
           location: 'Vancouver, BC',
           details: [
             {
@@ -308,6 +309,7 @@ export const homeMockData = {
           image: Asset2,
           imageLabel: 'From $126',
           title: '408 St. Jacques | 1 Br',
+          host: 'Jimmy',
           location: 'Victoria, BC',
           details: [
             {
@@ -343,6 +345,7 @@ export const homeMockData = {
           image: Asset1,
           imageLabel: 'From $126',
           title: '408 St. Jacques | 1 Br',
+          host: 'Laura',
           location: 'Tofino, BC',
           details: [
             {
@@ -378,6 +381,7 @@ export const homeMockData = {
           image: Asset2,
           imageLabel: 'From $126',
           title: '408 St. Jacques | 1 Br',
+          host: 'Hannah',
           location: 'Whistler, BC',
           details: [
             {

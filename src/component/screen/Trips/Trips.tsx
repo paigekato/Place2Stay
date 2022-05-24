@@ -2,9 +2,9 @@ import React from 'react';
 import { FlatList, SafeAreaView, View } from 'react-native';
 
 import Text from '/component/base/Text';
-import PlaceCta from '/component/partial/PlaceCta';
 import SearchButton from '/component/partial/SearchButton';
 import SectionHeader from '/component/partial/SectionHeader';
+import StayMini from '/component/partial/StayMini';
 import { homeMockData } from '/data/mockData';
 
 import { TripsProps } from './Trips.types';
@@ -37,11 +37,8 @@ const Trips: React.FC<TripsProps> = ({ navigation }) => {
           </View>
         }
         renderItem={({ item }) => (
-          <PlaceCta
-            image={item.image}
-            title={item.location}
-            location={item.title}
-            eyebrow={item.imageLabel}
+          <StayMini
+            stay={item}
             style={styles.wrapper}
             onPress={() =>
               navigation.push('Stay', {
