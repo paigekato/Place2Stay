@@ -16,6 +16,9 @@ export default StyleSheet.create({
     paddingTop: 24,
     alignItems: 'flex-start',
   },
+  calendarWrapper: {
+    marginTop: 24,
+  },
   flexibleWrapper: {
     marginTop: 24,
     borderTopWidth: 1,

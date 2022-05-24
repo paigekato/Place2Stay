@@ -8,7 +8,6 @@ import styles from './SearchGuests.styles';
 
 const SearchGuests: React.FC = ({ navigation, route }) => {
   const { location, dates } = route.params;
-  const { length, month } = dates;
 
   const handleButtonPress = () => {
     // TODO add SearchResults screen that mimicks home
@@ -18,7 +17,7 @@ const SearchGuests: React.FC = ({ navigation, route }) => {
   return (
     <SafeAreaView>
       <View style={styles.container}>
-        <SearchDetails location={location} dates={`${length} in ${month}`} />
+        <SearchDetails location={location} dates={dates} />
 
         <View style={styles.content}>
           <Text variant="heading2">Who's coming?</Text>

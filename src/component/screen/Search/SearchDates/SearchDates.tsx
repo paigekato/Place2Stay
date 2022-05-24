@@ -7,29 +7,22 @@ import {
   ScrollView,
   View,
 } from 'react-native';
+import { onPressProps } from 'component/base/Calendar/Calendar.types';
 
+import Calendar from '/component/base/Calendar';
+import {
+  DATES_OPTIONS,
+  LENGTH_OPTIONS,
+} from '/component/base/Calendar/dates.const';
+import { getSelectedDateString } from '/component/base/Calendar/dates.util';
 import Text from '/component/base/Text';
 import CalendarToggle from '/component/partial/CalendarToggle';
 import SearchDetails from '/component/partial/SearchDetails';
 
 import styles from './SearchDates.styles';
 
-const LENGTH_OPTIONS = ['Weekend', 'Week', 'Month'];
-const DATES_OPTIONS = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-];
-
 const SearchDates: React.FC = ({ navigation, route }) => {
-  const [activeView, setActiveView] = React.useState('flexible');
+  const [activeView, setActiveView] = React.useState('dates'); // dates || flexible
   const [length, setLength] = React.useState('Weekend');
   const [date, setDate] = React.useState('January');
 
@@ -38,15 +31,19 @@ const SearchDates: React.FC = ({ navigation, route }) => {
   const handleButtonPress = () => {
     navigation.navigate('SearchGuests', {
       location,
-      dates: {
-        month: date,
-        length,
-      },
+      dates: activeView === 'dates' ? date : `${length} in ${date}`,
     });
   };
 
   const handleTogglePress = (value: string) => {
     setActiveView(value);
+  };
+
+  const handleDateSelect = ({ endingDate, startingDate }: onPressProps) => {
+    // Create a placeholder date string to show in search params
+    const dateString = getSelectedDateString({ startingDate, endingDate });
+
+    setDate(dateString);
   };
 
   return (
@@ -57,10 +54,16 @@ const SearchDates: React.FC = ({ navigation, route }) => {
           <View>
             <CalendarToggle onPress={handleTogglePress} />
 
+            {/* DATE VIEW SHOWS CALENDAR */}
             {activeView === 'dates' ? (
-              <Text>Calendar Picker</Text>
+              <Calendar
+                style={styles.calendarWrapper}
+                onPress={handleDateSelect}
+              />
             ) : (
+              // FLEXIBLE VIEW SHOWS PICKER BUTTONS
               <>
+                {/* Duration select  */}
                 <View style={styles.flexibleWrapper}>
                   <Text variant="label">
                     Stay for a{' '}
@@ -84,6 +87,8 @@ const SearchDates: React.FC = ({ navigation, route }) => {
                     ))}
                   </View>
                 </View>
+
+                {/* Month select */}
                 <View style={styles.flexibleWrapper}>
                   <Text variant="label">
                     Go in{' '}
