@@ -4,6 +4,8 @@ import {
   Close,
   Ellipsis,
   Location,
+  Plus,
+  Remove,
   Search,
   User,
 } from './svg';
@@ -14,6 +16,8 @@ export default {
   close: Close,
   ellipsis: Ellipsis,
   location: Location,
+  plus: Plus,
+  remove: Remove,
   search: Search,
   user: User,
 } as const;

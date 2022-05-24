@@ -5,3 +5,5 @@ export { default as Ellipsis } from './Ellipsis';
 export { default as Location } from './Location';
 export { default as Search } from './Search';
 export { default as User } from './User';
+export { default as Plus } from './Plus';
+export { default as Remove } from './Remove';

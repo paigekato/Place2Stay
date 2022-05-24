@@ -6,5 +6,6 @@ export interface IconButtonProps {
   onPress: () => void;
   icon?: IconName;
   size?: string;
+  isDisabled?: boolean;
   style?: StyleProp<ViewStyle>;
 }

@@ -11,10 +11,15 @@ const IconButton: React.FC<IconButtonProps> = ({
   onPress,
   icon = 'caret',
   size = '16px',
+  isDisabled = false,
   style: styleProps,
 }) => {
   return (
-    <Pressable onPress={onPress} style={[styles.container, styleProps]}>
+    <Pressable
+      disabled={isDisabled}
+      onPress={onPress}
+      style={[styles.container, styleProps]}
+    >
       <Icon name={icon} size={size} />
     </Pressable>
   );

@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { colors } from 'theme/colors';
 
 import SearchDatesStyles from '../SearchDates/SearchDates.styles';
 
@@ -8,11 +9,27 @@ export default StyleSheet.create({
     height: '100%',
     backgroundColor: 'white',
   },
+  heading: {
+    paddingBottom: 24,
+  },
   // lazy sharing styles
   content: {
     ...SearchDatesStyles.content,
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    alignItems: 'stretch',
   },
-  results: {
-    marginBottom: 16,
+  option: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginVertical: 12,
+    borderTopColor: colors.highlightColorLight,
+    borderTopWidth: 1,
+    paddingTop: 8,
+  },
+  increment: {
+    flexDirection: 'row',
+    alignItems: 'center',
   },
 });
