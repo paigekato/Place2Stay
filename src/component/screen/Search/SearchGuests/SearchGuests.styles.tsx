@@ -8,6 +8,7 @@ export default StyleSheet.create({
     paddingHorizontal: 24,
     height: '100%',
     backgroundColor: 'white',
+    marginBottom: 2,
   },
   heading: {
     paddingBottom: 24,
@@ -27,6 +28,9 @@ export default StyleSheet.create({
     borderTopColor: colors.highlightColorLight,
     borderTopWidth: 1,
     paddingTop: 8,
+  },
+  text: {
+    textTransform: 'capitalize',
   },
   increment: {
     flexDirection: 'row',

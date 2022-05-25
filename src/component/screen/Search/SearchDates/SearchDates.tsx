@@ -1,13 +1,13 @@
 import React from 'react';
 import {
   Animated,
-  Button,
   Pressable,
   SafeAreaView,
   ScrollView,
   View,
 } from 'react-native';
 
+import Button from '/component/base/Button';
 import Calendar from '/component/base/Calendar';
 import { onPressProps } from '/component/base/Calendar/Calendar.types';
 import {
@@ -126,7 +126,7 @@ const SearchDates: React.FC = ({ navigation, route }) => {
             )}
           </View>
         </Animated.View>
-        <Button title="Next" onPress={handleButtonPress} />
+        <Button align="right" title="Next" onPress={handleButtonPress} />
       </View>
     </SafeAreaView>
   );

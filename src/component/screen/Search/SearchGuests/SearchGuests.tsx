@@ -1,6 +1,7 @@
 import React from 'react';
-import { Alert, Button, SafeAreaView, View } from 'react-native';
+import { Alert, SafeAreaView, View } from 'react-native';
 
+import Button from '/component/base/Button';
 import IconButton from '/component/base/IconButton';
 import Text from '/component/base/Text';
 import SearchDetails from '/component/partial/SearchDetails';
@@ -60,8 +61,10 @@ const SearchGuests: React.FC = ({ navigation, route }) => {
             };
 
             return (
-              <View style={styles.option}>
-                <Text variant="heading3">{type}</Text>
+              <View style={styles.option} key={type}>
+                <Text variant="heading3" style={styles.text}>
+                  {type}
+                </Text>
 
                 <View style={styles.increment}>
                   <IconButton
@@ -80,7 +83,7 @@ const SearchGuests: React.FC = ({ navigation, route }) => {
             );
           })}
         </View>
-        <Button title="Next" onPress={handleButtonPress} />
+        <Button align="right" title="Next" onPress={handleButtonPress} />
       </View>
     </SafeAreaView>
   );

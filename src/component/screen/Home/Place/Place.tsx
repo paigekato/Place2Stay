@@ -1,6 +1,7 @@
 import React from 'react';
-import { Button, Image, ScrollView, View } from 'react-native';
+import { Image, ScrollView, View } from 'react-native';
 
+import Button from '/component/base/Button';
 import Icon from '/component/base/Icon';
 import Text from '/component/base/Text';
 
@@ -56,7 +57,7 @@ const Place: React.FC<PlaceProps> = ({ navigation, route }) => {
           <Text style={styles.dates}>Sept 12 -27</Text>
         </View>
 
-        <Button title="Reserve" />
+        <Button onPress={() => {}} title="Reserve" />
       </View>
     </View>
   );
