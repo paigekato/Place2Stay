@@ -1,7 +1,5 @@
 import { StyleSheet } from 'react-native';
 
-import { colors } from '/theme/colors';
-
 export default StyleSheet.create({
   container: {
     marginBottom: 34,
@@ -14,16 +12,14 @@ export default StyleSheet.create({
     width: '100%',
     height: '100%',
   },
-  title: {
+  textWrapper: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
     marginTop: 8,
   },
-  eyebrow: {
-    position: 'absolute',
-    top: 0,
-    right: 0,
-    backgroundColor: colors.highlightColor,
-    paddingVertical: 8,
-    paddingHorizontal: 12,
-    borderBottomLeftRadius: 8,
+  rating: {
+    flexDirection: 'row',
+    alignItems: 'center',
   },
 });

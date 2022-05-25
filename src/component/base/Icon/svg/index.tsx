@@ -8,3 +8,4 @@ export { default as User } from './User';
 export { default as Plus } from './Plus';
 export { default as Remove } from './Remove';
 export { default as House } from './House';
+export { default as Star } from './Star';

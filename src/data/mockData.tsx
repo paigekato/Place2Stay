@@ -452,7 +452,7 @@ export const staysMockData = [
   {
     location: 'Lac-Beauport, Canada',
     rating: '4.5',
-    hostedBy: 'Laury Jane',
+    host: 'Laury Jane',
     description:
       "At the beginning, the Lagöm is a swedish way of life: how to live well with less. With its large windows, the Lagöm offers you a totale immersion on the nature with a breathtaking view on the mountains and the Saint Laurent river. There is no television on the chalet to reduce your energy consumption but don't worry WIFI is in here. You could contact your family and friends thanks to our satellite.",
     price: 425,
@@ -463,7 +463,7 @@ export const staysMockData = [
   {
     location: 'Tulum, Mexico',
     rating: '4.8',
-    hostedBy: 'Andres Julio',
+    host: 'Andres Julio',
     description:
       'Esmeralda Boutique Hotel is an artwork in itself. With all of its local artisan-crafted decor your stay is guaranteed to be an experience. Each apartment is a perfect balance of simplicity and elegance while offering the many comforts for the everyday modern traveler.',
     price: 211,
@@ -474,7 +474,7 @@ export const staysMockData = [
   {
     location: 'Palm Springs, United Sates',
     rating: '4.7',
-    hostedBy: 'Philip Daniels',
+    host: 'Philip Daniels',
     description:
       'Gorgeous midcentury gem tucked away at the foot of the San Jacinto mountain. This cozy time capsule was designed by famous architect William Krisel and features his signature butterfly roof. Expertly designed interiors made to stand out and match this quirky unique home. Relax in the hot tub in our yard, designed by an award winning hotel designer. Perfect retreat for anyone looking to enjoy the lush desert foliage but still, want the convenience of a 5-minute drive into downtown Palm Springs',
     price: 2359,

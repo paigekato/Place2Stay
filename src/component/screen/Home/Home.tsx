@@ -5,7 +5,7 @@ import SearchButton from 'component/partial/SearchButton';
 import Text from '/component/base/Text';
 import PlaceCta from '/component/partial/PlaceCta';
 import SectionHeader from '/component/partial/SectionHeader';
-import { homeMockData } from '/data/mockData';
+import { homeMockData, staysMockData } from '/data/mockData';
 
 import { HomeProps } from './Home.types';
 
@@ -13,15 +13,16 @@ import styles from './Home.styles';
 
 const Home: React.FC<HomeProps> = ({ navigation }) => {
   const { placeCtas, cityCtas } = homeMockData.sections;
+  const stays = staysMockData;
 
   return (
     <SafeAreaView>
       <FlatList
         contentContainerStyle={styles.container}
-        data={placeCtas.places}
+        data={stays}
         initialNumToRender={10}
         showsVerticalScrollIndicator={false}
-        keyExtractor={(item) => item.title + item.id}
+        keyExtractor={(item) => item.location}
         ListHeaderComponent={
           <>
             <SearchButton
@@ -38,10 +39,7 @@ const Home: React.FC<HomeProps> = ({ navigation }) => {
         }
         renderItem={({ item }) => (
           <PlaceCta
-            image={item.image}
-            title={item.location}
-            location={item.title}
-            eyebrow={item.imageLabel}
+            place={item}
             style={styles.wrapper}
             onPress={() =>
               navigation.push('Stay', {

@@ -8,6 +8,7 @@ import {
   Plus,
   Remove,
   Search,
+  Star,
   User,
 } from './svg';
 
@@ -21,5 +22,6 @@ export default {
   plus: Plus,
   remove: Remove,
   search: Search,
+  star: Star,
   user: User,
 } as const;
