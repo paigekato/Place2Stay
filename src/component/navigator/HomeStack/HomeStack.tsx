@@ -3,7 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import IconButton from '/component/base/IconButton';
 import Home from '/component/screen/Home';
-import Stay from '/component/screen/Trips/Stay';
+import Place from '/component/screen/Home/Place';
 
 const { Navigator, Screen } = createNativeStackNavigator();
 
@@ -12,8 +12,8 @@ const HomeStack: React.FC = () => {
     <Navigator screenOptions={{ headerShown: false }}>
       <Screen name="HomeHome" component={Home} />
       <Screen
-        name="Stay"
-        component={Stay}
+        name="Place"
+        component={Place}
         options={({ navigation }) => ({
           headerShown: true,
           headerTransparent: false,

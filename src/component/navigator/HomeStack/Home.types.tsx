@@ -1,8 +1,8 @@
-import { Stay } from '/component/screen/Trips/Stay/Stay.types';
+import { PlaceBaseProps } from '/component/screen/Home/Place/Place.types';
 
 export type HomeStackScreens = {
   HomeHome: undefined;
-  Stay: {
-    stay: Stay;
+  Place: {
+    stay: PlaceBaseProps;
   };
 };

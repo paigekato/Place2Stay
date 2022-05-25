@@ -42,7 +42,7 @@ const Home: React.FC<HomeProps> = ({ navigation }) => {
             place={item}
             style={styles.wrapper}
             onPress={() =>
-              navigation.push('Stay', {
+              navigation.push('Place', {
                 stay: item,
               })
             }

@@ -1,15 +1,6 @@
-import { ImageSourcePropType, StyleProp, ViewStyle } from 'react-native';
+import { StyleProp, ViewStyle } from 'react-native';
 
-export interface PlaceBaseProps {
-  location: string;
-  rating: string;
-  host: string;
-  description: string;
-  price: number;
-  beds: number;
-  bath: number;
-  image: ImageSourcePropType;
-}
+import { PlaceBaseProps } from '/component/screen/Home/Place/Place.types';
 
 export interface PlaceCtaProps {
   place: PlaceBaseProps;
