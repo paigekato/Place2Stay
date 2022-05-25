@@ -6,6 +6,7 @@ export default StyleSheet.create({
   container: {
     paddingHorizontal: 24,
     height: '100%',
+    marginBottom: 34, // weird thing going on with safeareaview
   },
   wrapper: {
     backgroundColor: 'white',
@@ -21,7 +22,6 @@ export default StyleSheet.create({
     marginTop: 8,
     padding: 24,
     paddingBottom: 0,
-    alignItems: 'flex-start',
   },
   searchForm: {
     marginTop: 20,

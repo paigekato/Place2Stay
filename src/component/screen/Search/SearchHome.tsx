@@ -21,32 +21,38 @@ const SearchHome: React.FC = ({ navigation }) => {
     new Animated.Value(searchButtonHeight),
   ).current;
 
-  const animate = () =>
-    Animated.parallel([
+  const animate = (direction = 'in', navigateOnEnd = false) => {
+    const animationIn = direction === 'in';
+
+    return Animated.parallel([
       Animated.timing(fadeInAnimation, {
-        toValue: 1,
-        duration: 500,
+        toValue: animationIn ? 1 : 0,
+        duration: animationIn ? 500 : 350,
+        delay: animationIn ? 0 : 440,
         useNativeDriver: true,
       }),
       Animated.timing(contentFadeIn, {
-        toValue: 1,
-        duration: 800,
-        delay: 600,
+        toValue: animationIn ? 1 : 0,
+        duration: animationIn ? 800 : 350,
+        delay: animationIn ? 600 : 0,
         useNativeDriver: true,
       }),
       Animated.timing(heightAnimation, {
-        toValue: 450,
-        duration: 600,
-        delay: 600,
+        toValue: animationIn ? 450 : searchButtonHeight,
+        duration: animationIn ? 400 : 500,
+        delay: animationIn ? 600 : 0,
         easing: Easing.bezier(0.17, 0.67, 0.27, 0.84),
         useNativeDriver: false,
       }),
-    ]).start();
+    ]).start(() => {
+      navigateOnEnd && navigation.goBack();
+    });
+  };
 
   React.useEffect(() => {
     // Make sure this screen is fully mounted before starting the animation
     const interactionPromise = InteractionManager.runAfterInteractions(() =>
-      animate(),
+      animate('in'),
     );
 
     return () => interactionPromise.cancel();
@@ -58,17 +64,7 @@ const SearchHome: React.FC = ({ navigation }) => {
     outputRange: [0, 0.95],
   });
 
-  const opacitySlowFadeIn = contentFadeIn.interpolate({
-    inputRange: [0, 1],
-    outputRange: [0, 1],
-  });
-
-  const opacityFadeOut = fadeInAnimation.interpolate({
-    inputRange: [0, 1],
-    outputRange: [0, 1],
-  });
-
-  const handlePress = (city: string) => {
+  const handleSearchResultPress = (city: string) => {
     navigation.push('SearchDates', {
       location: city,
     });
@@ -76,15 +72,18 @@ const SearchHome: React.FC = ({ navigation }) => {
 
   return (
     <SafeAreaView>
-      <Animated.View style={[styles.container, { opacity: opacityFadeOut }]}>
+      <Animated.View style={[styles.container, { opacity: fadeInAnimation }]}>
         <Animated.View style={[styles.wrapper, { opacity: opacityFadeIn }]} />
 
-        <IconButton onPress={() => navigation.goBack()} size="16px" />
+        <IconButton onPress={() => animate('out', true)} size="16px" />
 
         <Animated.View style={[styles.search, { height: heightAnimation }]}>
-          <Animated.View style={{ opacity: opacitySlowFadeIn }}>
+          <Animated.View style={{ opacity: contentFadeIn }}>
             <Text variant="heading1">Where to?</Text>
-            <SearchForm style={styles.searchForm} onPress={handlePress} />
+            <SearchForm
+              style={styles.searchForm}
+              onPress={handleSearchResultPress}
+            />
           </Animated.View>
         </Animated.View>
       </Animated.View>

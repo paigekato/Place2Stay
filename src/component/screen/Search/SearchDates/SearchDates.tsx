@@ -48,7 +48,7 @@ const SearchDates: React.FC = ({ navigation, route }) => {
   };
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
       <View style={styles.container}>
         <SearchDetails location={location} />
         <Animated.View style={styles.content}>
