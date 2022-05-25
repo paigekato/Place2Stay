@@ -11,6 +11,7 @@ import { citiesMockData } from 'data/mockData';
 import Icon from '/component/base/Icon';
 import Text from '/component/base/Text';
 import TextInput from '/component/base/TextInput';
+import { handleScrollYOffset } from '/component/util/scroll';
 
 import { SearchButtonProps } from './SearchForm.types';
 
@@ -38,13 +39,7 @@ const SearchForm: React.FC<SearchButtonProps> = ({
 
   // Add top border to results when scrolled
   const handleScroll = (e: NativeSyntheticEvent<NativeScrollEvent>) => {
-    const offScrollY = e.nativeEvent.contentOffset.y;
-
-    if (offScrollY > 0) {
-      setHasScrolledResults(true);
-    } else {
-      setHasScrolledResults(false);
-    }
+    setHasScrolledResults(handleScrollYOffset(e));
   };
 
   return (

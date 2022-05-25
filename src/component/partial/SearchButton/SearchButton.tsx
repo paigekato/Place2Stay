@@ -10,6 +10,7 @@ import styles from './SearchButton.styles';
 
 const SearchButton: React.FC<SearchButtonProps> = ({
   onPress,
+  subtitle = 'Location - Add guests',
   style: styleProps,
 }) => {
   const opacityAnimation = React.useRef(new Animated.Value(1)).current;
@@ -37,13 +38,15 @@ const SearchButton: React.FC<SearchButtonProps> = ({
     <Pressable
       onPress={onPress}
       style={[styles.container, styleProps]}
-      onPressIn={fadeOut}
-      onPressOut={fadeIn}
+      onPressIn={onPress && fadeOut}
+      onPressOut={onPress && fadeIn}
     >
       <Icon name="search" size="24px" />
       <Animated.View style={[styles.textWrapper, { opacity }]}>
         <Text style={styles.placeholder}>Where to?</Text>
-        <Text color="grey">Location - Add guests</Text>
+        <Text color="grey" numberOfLines={1}>
+          {subtitle}
+        </Text>
       </Animated.View>
     </Pressable>
   );

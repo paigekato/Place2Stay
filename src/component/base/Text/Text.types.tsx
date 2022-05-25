@@ -1,6 +1,6 @@
-import { StyleProp, TextStyle } from 'react-native';
+import { StyleProp, TextProps as RNTextProps, TextStyle } from 'react-native';
 
-export interface TextProps {
+export interface TextProps extends RNTextProps {
   style?: StyleProp<TextStyle>;
   variant?:
     | 'heading1'

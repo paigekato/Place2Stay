@@ -37,7 +37,11 @@ const SearchGuests: React.FC = ({ navigation, route }) => {
         ],
       );
     } else {
-      navigation.navigate('HomeHome');
+      navigation.navigate('SearchResults', {
+        location,
+        dates,
+        guests,
+      });
     }
   };
 

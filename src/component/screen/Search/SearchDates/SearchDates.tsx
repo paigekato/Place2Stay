@@ -25,7 +25,7 @@ import styles from './SearchDates.styles';
 const SearchDates: React.FC = ({ navigation, route }) => {
   const [activeView, setActiveView] = React.useState('dates'); // dates || flexible
   const [length, setLength] = React.useState('Weekend');
-  const [date, setDate] = React.useState('January');
+  const [date, setDate] = React.useState('');
 
   const { location } = route.params;
 
@@ -126,7 +126,12 @@ const SearchDates: React.FC = ({ navigation, route }) => {
             )}
           </View>
         </Animated.View>
-        <Button align="right" title="Next" onPress={handleButtonPress} />
+        <Button
+          isDisabled={!date}
+          align="right"
+          title="Next"
+          onPress={handleButtonPress}
+        />
       </View>
     </SafeAreaView>
   );

@@ -12,6 +12,9 @@ export default StyleSheet.create({
     color: 'white',
     textAlign: 'center',
   },
+  disabled: {
+    backgroundColor: colors.highlightColorLight,
+  },
   center: {},
   left: {
     alignSelf: 'flex-start',

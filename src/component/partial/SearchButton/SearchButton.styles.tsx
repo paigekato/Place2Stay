@@ -11,6 +11,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     borderRadius: 20,
     height: 52,
+    paddingRight: 40,
   },
   placeholder: {
     fontWeight: '600',

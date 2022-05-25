@@ -38,7 +38,12 @@ const Button: React.FC<IconButtonProps> = ({
         onPress={onPress}
         onPressIn={() => animatePress('in')}
         onPressOut={() => animatePress('out')}
-        style={[styles.container, styles[align], styleProps]}
+        style={[
+          styles.container,
+          styles[align],
+          isDisabled && styles.disabled,
+          styleProps,
+        ]}
       >
         <Text fontWeight="600" style={styles.text}>
           {title}
