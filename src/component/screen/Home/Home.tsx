@@ -1,10 +1,20 @@
 import React from 'react';
-import { FlatList, Image, SafeAreaView, ScrollView, View } from 'react-native';
+import {
+  Animated,
+  FlatList,
+  Image,
+  NativeScrollEvent,
+  NativeSyntheticEvent,
+  SafeAreaView,
+  ScrollView,
+  View,
+} from 'react-native';
 
 import Text from '/component/base/Text';
 import PlaceCta from '/component/partial/PlaceCta';
 import SearchButton from '/component/partial/SearchButton';
 import SectionHeader from '/component/partial/SectionHeader';
+import { handleScrollYOffset } from '/component/util/scroll';
 import { homeMockData, staysMockData } from '/data/mockData';
 
 import { HomeProps } from './Home.types';
@@ -15,9 +25,46 @@ const Home: React.FC<HomeProps> = ({ navigation }) => {
   const { placeCtas, cityCtas } = homeMockData.sections;
   const stays = staysMockData;
 
+  const animated = React.useRef(new Animated.Value(1)).current;
+
+  const [isScrolledY, setIsScrolledY] = React.useState(false);
+  const [scrollPosYOld, setScrollPosYOld] = React.useState(0);
+  const [scrollPosYNew, setScrollPosYNew] = React.useState(0);
+  const [height, setHeight] = React.useState(0);
+
+  const handleScroll = (e: NativeSyntheticEvent<NativeScrollEvent>) => {
+    setIsScrolledY(handleScrollYOffset(e, 60));
+
+    setScrollPosYNew(e.nativeEvent.contentOffset.y);
+
+    // +30 prevents triggering when scroll view bounces
+    if (scrollPosYOld > scrollPosYNew + 30) {
+      animate('up');
+    }
+
+    setScrollPosYOld(scrollPosYNew);
+  };
+
+  const animate = (direction = 'down') => {
+    Animated.timing(animated, {
+      toValue: direction === 'down' ? 0 : -height,
+      duration: 300,
+      useNativeDriver: false,
+    }).start();
+  };
+
+  React.useEffect(() => {
+    if (isScrolledY) {
+      animate('down');
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isScrolledY]);
+
   return (
     <SafeAreaView>
       <FlatList
+        onScroll={handleScroll}
+        scrollEventThrottle={100}
         contentContainerStyle={styles.container}
         data={stays}
         initialNumToRender={10}
@@ -70,6 +117,15 @@ const Home: React.FC<HomeProps> = ({ navigation }) => {
           </View>
         }
       />
+      <Animated.View
+        style={[styles.searchBar, { transform: [{ translateY: animated }] }]}
+        onLayout={(e) => setHeight(e.nativeEvent.layout.height)}
+      >
+        <SearchButton
+          style={styles.searchButton}
+          onPress={() => navigation.push('Search')}
+        />
+      </Animated.View>
     </SafeAreaView>
   );
 };
