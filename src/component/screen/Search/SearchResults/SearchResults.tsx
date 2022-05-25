@@ -59,9 +59,10 @@ const SearchResults: React.FC = ({ navigation, route }) => {
           <ScrollView
             onScroll={handleScroll}
             showsVerticalScrollIndicator={false}
+            scrollEventThrottle={20}
           >
             {stays.map((stay) => (
-              <PlaceCta place={stay} onPress={() => {}} />
+              <PlaceCta key={stay.location} place={stay} onPress={() => {}} />
             ))}
           </ScrollView>
         </View>
