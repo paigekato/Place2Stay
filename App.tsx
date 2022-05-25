@@ -10,6 +10,20 @@ const App = () => {
         ...DefaultTheme,
         colors: { ...DefaultTheme.colors, background: 'white ' },
       }}
+      linking={{
+        prefixes: ['places2stay://'],
+        config: {
+          screens: {
+            Home: 'home',
+            Search: 'search',
+            BottomTabs: {
+              screens: {
+                Trips: 'trips',
+              },
+            },
+          },
+        },
+      }}
     >
       <ModalStack />
     </NavigationContainer>
@@ -17,3 +31,4 @@ const App = () => {
 };
 
 export default App;
+// npx uri-scheme open "places2stay://search" --ios
