@@ -1,7 +1,7 @@
 import React from 'react';
 import { Animated, Pressable } from 'react-native';
-import Icon from 'component/base/Icon';
 
+import Icon from '/component/base/Icon';
 import Text from '/component/base/Text';
 
 import { SearchButtonProps } from './SearchButton.types';

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Image, ScrollView, View } from 'react-native';
-import StayDetails from 'component/partial/StayDetails';
 
 import Text from '/component/base/Text';
+import StayDetails from '/component/partial/StayDetails';
 
 import { StayProps } from './Stay.types';
 

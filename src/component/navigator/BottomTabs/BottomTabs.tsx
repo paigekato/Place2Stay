@@ -1,12 +1,11 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Icon from 'component/base/Icon';
-import Text from 'component/base/Text';
 
+import Icon from '/component/base/Icon';
+import Text from '/component/base/Text';
 import HomeStack from '/component/navigator/HomeStack';
 import { Color, colors } from '/theme/colors';
 
-import SearchStack from '../SearchStack';
 import TripsStack from '../TripsStack';
 
 const Tab = createBottomTabNavigator();

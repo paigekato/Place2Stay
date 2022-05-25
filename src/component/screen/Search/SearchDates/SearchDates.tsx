@@ -7,15 +7,15 @@ import {
   ScrollView,
   View,
 } from 'react-native';
-import { onPressProps } from 'component/base/Calendar/Calendar.types';
-import Icon from 'component/base/Icon';
 
 import Calendar from '/component/base/Calendar';
+import { onPressProps } from '/component/base/Calendar/Calendar.types';
 import {
   DATES_OPTIONS,
   LENGTH_OPTIONS,
 } from '/component/base/Calendar/dates.const';
 import { getSelectedDateString } from '/component/base/Calendar/dates.util';
+import Icon from '/component/base/Icon';
 import Text from '/component/base/Text';
 import CalendarToggle from '/component/partial/CalendarToggle';
 import SearchDetails from '/component/partial/SearchDetails';

@@ -1,4 +1,4 @@
-import { Stay } from 'component/screen/Stay/Stay.types';
+import { Stay } from '/component/screen/Trips/Stay/Stay.types';
 
 export type HomeStackScreens = {
   HomeHome: undefined;

@@ -1,9 +1,9 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import SearchDates from 'component/screen/Search/SearchDates';
 
 import IconButton from '/component/base/IconButton';
 import Search from '/component/screen/Search';
+import SearchDates from '/component/screen/Search/SearchDates';
 import SearchGuests from '/component/screen/Search/SearchGuests';
 
 const { Navigator, Screen } = createNativeStackNavigator();

@@ -1,9 +1,9 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import IconButton from 'component/base/IconButton';
 
-import Stay from '/component/screen/Stay';
+import IconButton from '/component/base/IconButton';
 import Trips from '/component/screen/Trips';
+import Stay from '/component/screen/Trips/Stay';
 
 const { Navigator, Screen } = createNativeStackNavigator();
 

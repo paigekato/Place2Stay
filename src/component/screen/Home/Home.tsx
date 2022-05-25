@@ -1,9 +1,9 @@
 import React from 'react';
 import { FlatList, Image, SafeAreaView, ScrollView, View } from 'react-native';
-import SearchButton from 'component/partial/SearchButton';
 
 import Text from '/component/base/Text';
 import PlaceCta from '/component/partial/PlaceCta';
+import SearchButton from '/component/partial/SearchButton';
 import SectionHeader from '/component/partial/SectionHeader';
 import { homeMockData, staysMockData } from '/data/mockData';
 
