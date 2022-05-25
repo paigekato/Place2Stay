@@ -11,9 +11,11 @@ import Text from '/component/base/Text';
 import SearchButtonStyles from '/component/partial/SearchButton/SearchButton.styles';
 import SearchForm from '/component/partial/SearchForm';
 
+import { SearchHomeProps } from './SearchHome.types';
+
 import styles from './SearchHome.styles';
 
-const SearchHome: React.FC = ({ navigation }) => {
+const SearchHome: React.FC<SearchHomeProps> = ({ navigation }) => {
   const searchButtonHeight = SearchButtonStyles.container.height;
   const fadeInAnimation = React.useRef(new Animated.Value(0)).current;
   const contentFadeIn = React.useRef(new Animated.Value(0)).current;

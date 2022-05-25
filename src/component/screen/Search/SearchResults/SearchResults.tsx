@@ -14,9 +14,11 @@ import SearchButton from '/component/partial/SearchButton';
 import { handleScrollYOffset } from '/component/util/scroll';
 import { staysMockData } from '/data/mockData';
 
+import { SearchResultsProps } from './SearchResults.types';
+
 import styles from './SearchResults.styles';
 
-const SearchResults: React.FC = ({ navigation, route }) => {
+const SearchResults: React.FC<SearchResultsProps> = ({ navigation, route }) => {
   const { location, dates, guests } = route.params;
   const [isScrolled, setIsScrolled] = React.useState(false);
 
@@ -30,10 +32,10 @@ const SearchResults: React.FC = ({ navigation, route }) => {
     num > 0 && guestList.push(`${num} ${type}`);
   });
 
-  console.log(guestList);
-
   const handleButtonPress = () => {
-    navigation.navigate('HomeHome');
+    // TODO HOW DO I TYPE THIS
+    // TODO HOW DO I TYPE THIS
+    navigation.navigate('Home');
   };
 
   const handleScroll = (e: NativeSyntheticEvent<NativeScrollEvent>) => {

@@ -24,6 +24,8 @@ const Trips: React.FC<TripsProps> = ({ navigation }) => {
         keyExtractor={(item) => item.title + item.id}
         ListHeaderComponent={
           <View style={styles.container}>
+            {/* TODO HOW DO I TYPE THIS */}
+            {/* TODO HOW DO I TYPE THIS */}
             <SearchButton onPress={() => navigation.push('Search')} />
             <SectionHeader
               title="Trips"

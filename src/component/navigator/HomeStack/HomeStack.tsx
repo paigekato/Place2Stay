@@ -10,7 +10,7 @@ const { Navigator, Screen } = createNativeStackNavigator();
 const HomeStack: React.FC = () => {
   return (
     <Navigator screenOptions={{ headerShown: false }}>
-      <Screen name="HomeHome" component={Home} />
+      <Screen name="Home" component={Home} />
       <Screen
         name="Place"
         component={Place}

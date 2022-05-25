@@ -74,7 +74,7 @@ const Home: React.FC<HomeProps> = ({ navigation }) => {
           <>
             <SearchButton
               style={styles.searchButton}
-              onPress={() => navigation.push('Search')}
+              onPress={() => navigation.navigate('Search')}
             />
 
             <SectionHeader
@@ -89,6 +89,8 @@ const Home: React.FC<HomeProps> = ({ navigation }) => {
             place={item}
             style={styles.wrapper}
             onPress={() =>
+              // TODO HOW DO I TYPE THIS
+              // TODO HOW DO I TYPE THIS
               navigation.push('Place', {
                 stay: item,
               })

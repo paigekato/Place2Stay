@@ -1,8 +1,15 @@
-import { NavigatorScreenParams } from '@react-navigation/native';
-
-import { BottomTabsScreens } from '/component/navigator/BottomTabs/BottomTabs.types';
-
-export type ModalStackScreens = {
+export type SearchStackScreens = {
   SearchHome: undefined;
-  BottomTabs: NavigatorScreenParams<BottomTabsScreens>;
+  SearchDates: {
+    location: string;
+  };
+  SearchGuests: {
+    location: string;
+    dates: string;
+  };
+  SearchResults: {
+    location: string;
+    dates: string;
+    guests: Record<string, number>;
+  };
 };

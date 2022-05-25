@@ -6,6 +6,8 @@ import IconButton from '/component/base/IconButton';
 import Text from '/component/base/Text';
 import SearchDetails from '/component/partial/SearchDetails';
 
+import { SearchGuestsProps } from './SearchGuests.types';
+
 import styles from './SearchGuests.styles';
 
 const GUEST_RESTRICTIONS: Record<string, number> = {
@@ -15,7 +17,7 @@ const GUEST_RESTRICTIONS: Record<string, number> = {
   pet: 4,
 };
 
-const SearchGuests: React.FC = ({ navigation, route }) => {
+const SearchGuests: React.FC<SearchGuestsProps> = ({ navigation, route }) => {
   const { location, dates } = route.params;
   const [guests, setGuests] = React.useState<Record<string, number>>({
     adult: 0,

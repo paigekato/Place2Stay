@@ -5,7 +5,7 @@ import IconButton from '/component/base/IconButton';
 import Search from '/component/screen/Search';
 import SearchDates from '/component/screen/Search/SearchDates';
 import SearchGuests from '/component/screen/Search/SearchGuests';
-import SearchResults from 'component/screen/Search/SearchResults';
+import SearchResults from '/component/screen/Search/SearchResults';
 
 const { Navigator, Screen } = createNativeStackNavigator();
 

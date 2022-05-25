@@ -31,4 +31,3 @@ const App = () => {
 };
 
 export default App;
-// npx uri-scheme open "places2stay://search" --ios

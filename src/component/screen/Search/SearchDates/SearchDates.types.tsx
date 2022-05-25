@@ -1,5 +1,8 @@
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 
-import { ModalStackScreens } from '/component/navigator/ModalStack/ModalStack.types';
+import { SearchStackScreens } from '/component/navigator/SearchStack/SearchStack.types';
 
-export type SearchProps = NativeStackScreenProps<ModalStackScreens, 'Search'>;
+export type SearchDatesProps = NativeStackScreenProps<
+  SearchStackScreens,
+  'SearchDates'
+>;

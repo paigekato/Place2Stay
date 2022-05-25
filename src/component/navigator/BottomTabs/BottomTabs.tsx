@@ -12,12 +12,9 @@ const Tab = createBottomTabNavigator();
 
 const BottomTabs: React.FC = () => {
   return (
-    <Tab.Navigator
-      initialRouteName="Home"
-      screenOptions={{ headerShown: false }}
-    >
+    <Tab.Navigator screenOptions={{ headerShown: false }}>
       <Tab.Screen
-        name="Home"
+        name="Explore"
         component={HomeStack}
         options={{
           tabBarLabel: ({ focused }) => {

@@ -1,5 +1,4 @@
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { ModalStackScreens } from 'component/navigator/ModalStack/ModalStack.types';
 
-import { HomeStackScreens } from '/component/navigator/HomeStack/Home.types';
-
-export type HomeProps = NativeStackScreenProps<HomeStackScreens, 'HomeHome'>;
+export type HomeProps = NativeStackScreenProps<ModalStackScreens>;

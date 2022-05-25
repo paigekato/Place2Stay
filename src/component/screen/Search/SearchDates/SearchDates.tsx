@@ -20,9 +20,11 @@ import Text from '/component/base/Text';
 import CalendarToggle from '/component/partial/CalendarToggle';
 import SearchDetails from '/component/partial/SearchDetails';
 
+import { SearchDatesProps } from './SearchDates.types';
+
 import styles from './SearchDates.styles';
 
-const SearchDates: React.FC = ({ navigation, route }) => {
+const SearchDates: React.FC<SearchDatesProps> = ({ navigation, route }) => {
   const [activeView, setActiveView] = React.useState('dates'); // dates || flexible
   const [length, setLength] = React.useState('Weekend');
   const [date, setDate] = React.useState('');
