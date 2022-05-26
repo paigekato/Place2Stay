@@ -6,4 +6,5 @@ import { TripsStackScreens } from '/component/navigator/TripsStack/TripsStack.ty
 export type BottomTabsScreens = {
   Explore: NativeStackScreenProps<HomeStackScreens> | undefined;
   Trips: NativeStackScreenProps<TripsStackScreens> | undefined;
+  Settings: undefined;
 };

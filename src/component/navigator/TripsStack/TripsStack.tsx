@@ -1,9 +1,10 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import IconButton from '/component/base/IconButton';
 import Trips from '/component/screen/Trips';
 import Stay from '/component/screen/Trips/Stay';
+
+import { headerLeftNavOptions } from '../navigatorOptions';
 
 const { Navigator, Screen } = createNativeStackNavigator();
 
@@ -18,7 +19,7 @@ const TripsStack: React.FC = () => {
           headerShown: true,
           headerTransparent: false,
           title: '',
-          headerLeft: () => <IconButton onPress={() => navigation.goBack()} />,
+          headerLeft: () => headerLeftNavOptions(navigation),
         })}
       />
     </Navigator>

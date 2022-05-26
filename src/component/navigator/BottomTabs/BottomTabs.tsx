@@ -1,11 +1,10 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import Icon from '/component/base/Icon';
-import Text from '/component/base/Text';
 import HomeStack from '/component/navigator/HomeStack';
-import { Color, colors } from '/theme/colors';
+import Settings from '/component/screen/Settings';
 
+import { tabBarIcon, tabBarLabel } from '../navigatorOptions';
 import TripsStack from '../TripsStack';
 
 const Tab = createBottomTabNavigator();
@@ -17,46 +16,24 @@ const BottomTabs: React.FC = () => {
         name="Explore"
         component={HomeStack}
         options={{
-          tabBarLabel: ({ focused }) => {
-            const styles = {
-              color: focused ? colors.highlightColor : colors.textPrimary,
-            };
-            return (
-              <Text variant="label" style={styles}>
-                Explore
-              </Text>
-            );
-          },
-          tabBarIcon: ({ focused }) => {
-            const iconColor = focused
-              ? colors.highlightColor
-              : colors.textPrimary;
-            return (
-              <Icon name="search" size="24px" color={iconColor as Color} />
-            );
-          },
+          tabBarLabel: ({ focused }) => tabBarLabel(focused, 'Explore'),
+          tabBarIcon: ({ focused }) => tabBarIcon(focused, 'search'),
         }}
       />
       <Tab.Screen
         name="Trips"
         component={TripsStack}
         options={{
-          tabBarLabel: ({ focused }) => {
-            const styles = {
-              color: focused ? colors.highlightColor : colors.textPrimary,
-            };
-            return (
-              <Text variant="label" style={styles}>
-                Trips
-              </Text>
-            );
-          },
-          tabBarIcon: ({ focused }) => {
-            const iconColor = focused
-              ? colors.highlightColor
-              : colors.textPrimary;
-            return <Icon name="house" size="24px" color={iconColor as Color} />;
-          },
+          tabBarLabel: ({ focused }) => tabBarLabel(focused, 'Trips'),
+          tabBarIcon: ({ focused }) => tabBarIcon(focused, 'house'),
+        }}
+      />
+      <Tab.Screen
+        name="Settings"
+        component={Settings}
+        options={{
+          tabBarLabel: ({ focused }) => tabBarLabel(focused, 'Settings'),
+          tabBarIcon: ({ focused }) => tabBarIcon(focused, 'user'),
         }}
       />
     </Tab.Navigator>

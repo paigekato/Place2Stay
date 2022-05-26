@@ -1,11 +1,12 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import IconButton from '/component/base/IconButton';
 import Search from '/component/screen/Search';
 import SearchDates from '/component/screen/Search/SearchDates';
 import SearchGuests from '/component/screen/Search/SearchGuests';
 import SearchResults from '/component/screen/Search/SearchResults';
+
+import { headerLeftNavOptions, searchStackOptions } from '../navigatorOptions';
 
 const { Navigator, Screen } = createNativeStackNavigator();
 
@@ -33,54 +34,24 @@ const ModalStack: React.FC = () => {
         name="SearchDates"
         component={SearchDates}
         options={({ navigation }) => ({
-          headerShown: true,
-          title: '',
-          animation: 'default',
-          presentation: 'card',
-          headerLeft: () => (
-            <IconButton
-              onPress={() => navigation.goBack()}
-              size="16px"
-              // eslint-disable-next-line react-native/no-inline-styles
-              style={{ marginLeft: 4, paddingTop: -24 }}
-            />
-          ),
+          ...searchStackOptions,
+          headerLeft: () => headerLeftNavOptions(navigation),
         })}
       />
       <Screen
         name="SearchGuests"
         component={SearchGuests}
         options={({ navigation }) => ({
-          headerShown: true,
-          title: '',
-          animation: 'none',
-          presentation: 'card',
-          headerLeft: () => (
-            <IconButton
-              onPress={() => navigation.goBack()}
-              size="16px"
-              // eslint-disable-next-line react-native/no-inline-styles
-              style={{ marginLeft: 4, paddingTop: -24 }}
-            />
-          ),
+          ...searchStackOptions,
+          headerLeft: () => headerLeftNavOptions(navigation),
         })}
       />
       <Screen
         name="SearchResults"
         component={SearchResults}
         options={({ navigation }) => ({
-          headerShown: true,
-          title: '',
-          animation: 'none',
-          presentation: 'card',
-          headerLeft: () => (
-            <IconButton
-              onPress={() => navigation.goBack()}
-              size="16px"
-              // eslint-disable-next-line react-native/no-inline-styles
-              style={{ marginLeft: 4, paddingTop: -24 }}
-            />
-          ),
+          ...searchStackOptions,
+          headerLeft: () => headerLeftNavOptions(navigation),
         })}
       />
     </Navigator>
